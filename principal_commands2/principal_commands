@@ -1,0 +1,708 @@
+
+
+Main commands
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+STEPS: 
+
+GIT + GITHUB
+
+
+INSTALL
+
+	# sudo apt-get update && sudo apt-get upgrade -y
+	# apt list --upgradable
+    # sudo apt install git-all
+    # sudo apt install git
+    # sudo apt-get install git-core git-svn 
+
+
+Checking the installation
+    # git --version
+
+
+
+
+sudo apt install openssh-client
+ssh-keygen -t rsa -C pedro-akira@hotimail
+cd ~
+cd .ssh
+ls -lath 
+    id_rsa       -> key privave **not share
+    id_rsa.pub   -> key public
+
+
+add to github 
+
+
+ssh -T git@github.com
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+abstract: local GIT
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--OLD
+
+
+Principais comandos
+
+
+resumo: GIT local
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+instala��o:
+#ambiente linux - ubuntu:
+$ sudo apt-get install git-core git-svn shh
+
+
+configura��o:
+$ git config --list #exibir as congira��es
+$ git config --global user.name "<seu nome>"
+$ git config --global user.email "<seu email corporativo>"
+$ git config --list
+
+
+
+
+gerando chave ssh:
+$ ssh-keygen -t rsa
+# .ssh/id_rsa. - chave privada
+# .ssh/id_rsa.pub.
+# caminho - /home/user/.ssh
+#ou
+$ ssh-keygen -t rsa -C "<seu email>@serpro.gov.br" -b 4096 -f ~/.ssh/id_rsa-gitcorporativo-treinamento
+# enter passphare -> colocar senha: Pedro + padr�o serpro
+
+
+
+$ git --version
+# ver vers�o do git instalado
+
+
+$ git --help
+# Mostrar mais op��es de comandos
+
+
+$ git init
+#cria os repositorios git
+
+
+$ git log
+#mostra todos os commits, historico
+
+
+$ git status
+#mostra os arquivos disponiveis para comit
+
+
+$ git show 79b605a2b0f846a616f3720726cf8b6cf6ecd1c1
+# identificar pela hash o que aconteceu
+# quando tem + significa que foi adicionado uma nova linha
+
+
+$ git diff
+# ver mudan�as antes de enviar para commit
+# e antes de git add
+# estado modified
+
+
+
+
+Desfazer coisas
+$ git checkout arquivo.txt
+# retorna o arquivo para antes da edi��o
+# *antes de commitar e git add arquivo.txt
+
+Desfazer um commit
+git reset HEAD
+# ajusta o ponteiro para o estado antigo
+# reset --soft --mixed --hard
+
+
+
+Branch:
+# ponteiro movel que leva o commit
+
+#criar um branch
+$ git checkout -b teste
+
+#listar os branch e qual branch esta no momento
+$ git branch
+
+
+#para selecionar o branch
+$ git checkout nome_do_branch
+
+
+#apagar um branch
+$ git branch -D teste
+
+
+
+
+
+
+#merge
+$ git marge nome_branch
+#unindo os branchs
+
+
+
+#rebase
+$ git rebase rebase
+#unindo os branchs
+
+
+
+
+
+
+# gitignore. ignorar arquivos
+# n�o quer mostrar senha
+# arquivo no nosso diretorio principal
+$ touch .gitignore
+$ vim .gitignore
+# nome dos arquivos para ignorar 
+$ *.xml gie 
+$exe_criacao_arquivo
+$exe_limpezaGIE 
+# Ignora o arquivo-ignorado.txt
+$*.txt
+# ou nome do arquivo
+$ db.xml
+#depois
+$git add .gitignore
+#pronto! depois so para testar git status - para ver se os arquivos n�o aparecem mais mesmo 
+
+
+
+
+
+# git stash
+# responsavel guardar arquivos que ainda n�o foram commitados em um arquivo
+# WIP - esta em work progress
+$ git stash
+$ git stash apply
+#
+$ git stash list
+
+
+
+
+# alias para um comando
+$ git config --global alias.s status
+$ git config --global alias.l log
+
+
+
+
+#TAG
+# com sistemas de vers�es
+# nova vers�o, marcador de commit (-a - tag com anota��o)
+$ git tag -a 1.0.0 -m "Readme finalizado"
+# listar todas as tags
+$ git tag
+
+
+
+
+# Revert
+# alem do reset e checkout
+# O codigo � mais ou menos aquele
+$ git log
+# buscar pelo commit que deu problema
+# git revert db50c41b8fc47a44fdfc7a027cecd3e44e6a193e
+# n�o some com o commit que vc tinha feito
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+resumo: GitHub
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+* todas as programa��es que eu fizer, jogar no github - para backup, treino e historico
+
+# Repositorio remoto
+# Criar repositorio
+# New Repository -> Repository name -> Created Repository
+
+
+#chave SSH
+# 1 - gerar chave ssh, 2 - adiconar chave ssh
+# https://help.github.com/en/articles/connecting-to-github-with-ssh
+# https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+# * email do github
+$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+$ cat id_rsa.pub
+# caminho /root/.ssh
+#2- adicionar chave ssh no github - setting - add ssh
+
+
+
+
+#Ligando repositorio local com remoto
+# git j� da as instru��es, https://github.com/pedroAkiraDanno/github-course
+$ git remote add origin git@github.com:pedroAkiraDanno/github-course.git
+$ git push -u origin master
+
+
+#enviado primeiro push - push � enviar o arquivo para o github
+$ git push -u origin master
+
+*origin: nome do reposit�rio remoto (origin � o nome criado por padr�o);
+
+
+
+
+#Enviando Mudan�as para um repositorio remoto
+# subir modifica��o
+# origin nome padr�o mas pode mudar, master � um branch
+$ git push origin master
+
+
+
+#clonando repositorios remotos
+# git clone permite clonar todo o repositorio para sua maquina
+# link ssh do repositorio
+# util quando tem de 3, 4 maquinas diferentes
+$ git clone https://github.com/Iterable/swift-sdk.git
+
+
+
+
+
+#removendo arquivos 
+#excluir arquivos desnecess�rios e fazer com que essa exclus�o seja refletida no(GitHub)
+$ git rm meu-script.sh
+$ git commit -m "Remove o arquivo meu-script.sh"
+$ git log
+$ git push
+
+
+
+
+
+# fork
+# uma copia de um repositorio que n�o � seu
+# um repositorio que vc quer ajudar a contribuir
+# 1 - fork
+# depois envia por request, quais mudan�as eu fiz
+# * s� clicar no botao fork
+# diferente do clone(meu repositorio), pode ate clonar mais n�o vai conseguir enviar fork copia e deixa vc envar depois
+ 
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Detalhado: GIT local
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+$ git log --decore
+# mostra os marges, se tem brench
+
+
+$ git log --author="pedro"
+# filtrar por autor
+
+
+$ git shortlog
+# mostra em ordem alfabetica, quantos cada um fizeram de commits
+
+
+$ git shortlog -sn
+# mostra so a quantidade de commit e a pessoa
+
+
+
+$ git log --graph
+# mostra de norma grafica os commits
+
+
+# clonar = download 
+# fork = vc pode enviar commits - pushs
+
+
+$ git diff --name-only
+# mostrar qual arquivo foi modificado
+
+
+
+$ git commit -am "edit hello"
+# arquivo que j� foi comitado
+
+
+
+
+git reset
+# reset
+--soft
+--mixed
+--hard - iguinorar tudo o que foi feito
+git reset soft
+* tem que escolher um comite antes
+
+git reset --soft
+- vai para o modified
+tem que git add arquivo.txt
+* soft � bom
+
+git reset --mixed arquivo
+- vai para o
+pronto para comitar
+
+
+
+
+
+Branch:
+# ponteiro movel que leva o commit
+# primeiro ponteiro � o master
+# outro branch chamado teste, pode estar no mesmo pontiero ou em outro commit
+#qual vantagem ? pode modificar os aarquivos sem alterar o master
+# faculmente ligar e desligar branch
+# multiplas pessoas trabalhando ao mesmo tempo
+# corrigindo um bug, sem ninguem atrapalhar ninguem
+# evita conflitos
+# bem menor se todos trabalahnso no mesmo tempo
+# ambiente so separado para mim, depois que terminar meslar com o breach master
+
+
+
+
+#merge
+$
+# unindo os branchs
+# mester e teste, os dois apontando para o mesmo commit
+# hotfix
+# para criar um linear
+# cria um novo commit(C6) ele vai juntar os commits
+# pro - n�o destroi nenhenum commit
+# contra - commit extra - commit que n�o faz nada, s� juntar - deixa o historico poluido
+# historico linerar n�o estrutura linear - git -log --grafh
+
+
+#rebase
+$
+# deixando tudo linear
+# coloca no inicio da fila
+# merge e rebase fazem sentido
+# pro - evita commits extras - sempre linha reta,
+# contras - perde a linha cronologica - acaba mudando a mudan�a de historico
+# usado com bastante cuidado
+# melhor usar rebase
+
+
+
+
+$ git status
+mostra os arquivos disponiveis para comit
+estados dos arquivos:
+untracked,modified,unmodified,modified,staged
+
+https://pt.stackoverflow.com/questions/326086/quais-as-diferen%c3%a7as-entre-os-estados-dos-arquivos-do-git-untracked-unmodified
+
+*untracked: o git n�o sabe nada a respeito do arquivo. Quer dizer, at� sabe que ele existe, mas n�o vai controlar seu ciclo de vida
+*staged: os que est�o no staging area/index/cache. S�o os que estar�o no pr�ximo commit
+*modified: os que foram alterados, se comparados ao �ltimo commit
+unmodified: os que n�o foram alterados
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Reposit�rio Remoto Modelo Centralizado GIT
+
+# videos.serpro
+# N�o precisa de um servidor pq � baseado em arquivos do sistema
+$ git clone demo/.git demo2
+
+
+$ mkdir teste.git
+$ git init --bare
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Diversos:
+
+#sempre que formos iniciar uma nova tarefa, � importante obter as modifica��es, evitando assim trabalhar em cima de um c�digo desatualizado.
+
+#Manter o c�digo do reposit�rio local atualizado permite antecipar poss�veis problemas e conflitos que possam ocorrer, tornando-os mais f�ceis de serem resolvidos.
+
+
+#Conflitos ocorrem quando dois membros da equipe alteram, simultaneamente, um mesmo trecho de texto de um arquivo. Algumas vezes o Git Corporativo consegue mesclar (merge) o c�digo fonte dos dois desenvolvedores. Outras vezes, um dos desenvolvedores precisa mesclar de forma manual, resolvendo assim o conflito.
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---END 

@@ -2,7 +2,6 @@ README
 Git
 =====================================
 
-
 Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
 
 LINK: 
@@ -10,3 +9,12 @@ https://git-scm.com/
 
 Git is easy to learn and has a tiny footprint with lightning fast performance. 
 It outclasses SCM tools like Subversion, CVS, Perforce, and ClearCase with features like cheap local branching, convenient staging areas, and multiple workflows.
+
+
+
+
+Git Source Code Mirror - This is a publish-only repository but pull requests can be turned into patches to the mailing list via GitGitGadget (https://gitgitgadget.github.io/). Please follow Documentation/SubmittingPatches procedure for any of your improvements.
+
+LINK: 
+https://github.com/git/git
+
