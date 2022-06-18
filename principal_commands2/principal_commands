@@ -54,7 +54,8 @@ Add key to github
 abstract: local GIT
 
 
-
+See the version of git and if is install 
+    # git --version
 
 
 
