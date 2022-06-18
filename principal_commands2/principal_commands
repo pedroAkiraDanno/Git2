@@ -13,7 +13,6 @@ GIT + GITHUB
 
 
 INSTALL
-
 	# sudo apt-get update && sudo apt-get upgrade -y
 	# apt list --upgradable
     # sudo apt install git-all
@@ -27,19 +26,26 @@ Checking the installation
 
 
 
-sudo apt install openssh-client
-ssh-keygen -t rsa -C pedro-akira@hotimail
-cd ~
-cd .ssh
-ls -lath 
-    id_rsa       -> key privave **not share
-    id_rsa.pub   -> key public
+Add key to github
+    # sudo apt install openssh-client
+    # ssh-keygen -t rsa -C pedro-akira@hotimail
+    # cd ~
+    # cd .ssh
+    # ls -lath 
+        id_rsa       -> key privave **not share
+        id_rsa.pub   -> key public
+    
+    Add key to github 
+        # setting -> SSH and GPG keys -> SSH keys -> New: name of computer and paste the **id_rsa.pub
+
+    #ssh -T git@github.com
+
+    **why add key to github? 
+    to access the repos via ssh, if not put key you need access repos using https and all time need put user and password
+    ref: https://www.youtube.com/watch?v=tjZEplICR5g
 
 
-add to github 
 
-
-ssh -T git@github.com
 
 
 
@@ -54,6 +60,30 @@ abstract: local GIT
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
