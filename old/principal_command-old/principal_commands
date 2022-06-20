@@ -126,7 +126,7 @@ $*.txt
 # ou nome do arquivo
 $ db.xml
 #depois
-$git add .gitignore
+$ git add .gitignore
 #pronto! depois so para testar git status - para ver se os arquivos n�o aparecem mais mesmo 
 
 
