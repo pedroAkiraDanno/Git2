@@ -100,12 +100,68 @@ Get an existing repository
 
 
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+STEPS2: 
+
+GIT + GITHUB
+
+
+
+Tag/REALEASES 
+    Tag:
+    Listing Your Tags
+        # git tag
+        # git tag -l
+        # git tag --list
+        # git tag -l "v1.8.5*"
+        
+
+    Creating Tags
+        Git supports two types of tags: lightweight and annotated.
+        A lightweight tag is very much like a branch that doesnt change— its just a pointer to a specific commit.
+        Annotated tags, however, are stored as full objects in the Git database.
+
+    Annotated Tags
+        # git tag -a v0.1.0 -m "New version for v0.1.0"
+        # git tag
+
+
+    You can see the tag data along with the commit that was tagged by using the git show command:
+        # git show v0.1.0
+
+    Sharing Tags
+        By default, the git push command doesnt transfer tags to remote servers. 
+        git push origin <tagname>.
+        # git push origin v0.1.0
+
+    If you have a lot of tags that you want to push up at once, you can also use the --tags option to the git push command. This will transfer all of your tags to the remote server that are not already there.
+        # git push origin --tags
+
+    Checking out Tags
+        If you want to view the versions of files a tag is pointing to, you can do a git checkout of that tag
+        # git checkout v2.0.0
+        Or undo this operation with:
+        # git switch -
+
+
+    Assents -> is source_code in zip to download about the tag you create
+
+    Exemplo of tags to use version:
+        v0.1.0
+        v0.2.0
+        v0.3.0
+
+    refs:
+        Semantic Versioning 2.0.0:              https://semver.org/
+        How to Release Code With Github:        https://www.youtube.com/watch?v=Ob9llA_QhQY
+        2.6 Git Basics - Tagging:               https://git-scm.com/book/en/v2/Git-Basics-Tagging
+
 
 
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
-abstract: local GIT
+abstract/commands: local GIT
 
 
 See the version of git and if is install 
@@ -126,10 +182,6 @@ Alias to one command
     #  git l 
 
 
-REALEASES 
-v0.1.0
-v0.2.0
-v0.3.0
 
 
 
