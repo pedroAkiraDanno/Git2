@@ -189,6 +189,20 @@ Uploads all local branch commits to GitHub
 
 
 
+GIT LOG - Show commit logs
+    # git log
+    # git log --all --decorate --oneline --graph
+    # git log --graph
+
+    # git log --graph --pretty="%ad" --date=short
+    # git log --oneline
+
+REFE: https://git-scm.com/docs/git-log
+
+
+
+
+
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 
