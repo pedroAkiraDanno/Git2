@@ -98,6 +98,8 @@ Get an existing repository
     # git push -u origin main
 
 
+Uploads all local branch commits to GitHub
+    # git pull
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -182,7 +184,8 @@ Alias to one command
     #  git l 
 
 
-
+Uploads all local branch commits to GitHub
+    # git pull
 
 
 
