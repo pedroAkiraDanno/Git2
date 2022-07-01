@@ -171,12 +171,47 @@ STEPS 3:
 
 GIT + GITHUB
 
+Conventional commits & Semantic Versioning
+
+
+
+The commit message should be structured as follows:
+
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+
+
+<type>
+[
+  'build',
+  'chore',
+  'ci',
+  'docs',
+  'feat',
+  'fix',
+  'perf',
+  'refactor',
+  'revert',
+  'style',
+  'test',
+  'BREAKING CHANGE'
+];
+
+
+
+Examples
+
+Commit message with scope and ! to draw attention to breaking change
+feat(api)!: send an email to the customer when a product is shipped
 
 
 
 
-
-
+https://www.conventionalcommits.org/en/v1.0.0/#summary
+https://semver.org/
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 abstract/commands: local GIT
