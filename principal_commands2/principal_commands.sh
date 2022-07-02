@@ -213,6 +213,53 @@ feat(api)!: send an email to the customer when a product is shipped
 https://www.conventionalcommits.org/en/v1.0.0/#summary
 https://semver.org/
 
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+STEPS 4: 
+
+GIT + GITHUB
+
+Branch & Branching Strategies
+
+
+See which branch you current on 
+    # git status 
+    # git branch 
+
+Full list all the branchs have or was created 
+    # git branch --list 
+
+
+Create branch 
+    # git branch alpha
+
+
+Switch to the branchs 
+    # git checkout alpha
+
+
+Create a create and immediantely switch to the breach that created like:(git branch beta & git checkout beta)
+    # git checkout -b beta
+
+
+Create and push the brash to GitHub
+    # git push --set-upstream origin alpha
+
+
+
+
+
+
+
+refes: 
+Learn Git from Scratch - How to Create Branches and push to Github   -link:    https://www.youtube.com/watch?v=pDmYNK68IEc
+
+
+
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 abstract/commands: local GIT
 
