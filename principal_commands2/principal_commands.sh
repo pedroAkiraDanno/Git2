@@ -222,7 +222,7 @@ STEPS 4:
 
 GIT + GITHUB
 
-Branch & Branching Strategies
+Branch & Branching Strategies (local and remote)
 
 
 See which branch you current on 
@@ -245,10 +245,29 @@ Create a create and immediantely switch to the breach that created like:(git bra
     # git checkout -b beta
 
 
-Create and push the brash to GitHub
+Rename the branch (change the current branch) local 
+    # git branch -m <new-name>
+    change the specificny branch
+    # git branch -m alpha new-name-to-alpha
+
+
+
+
+
+Create and push the brash to GitHub (local and remote)
     # git push --set-upstream origin alpha
 
 
+Publishing Branches
+"Uploading" a local branch for the first time
+    # git push -u origin <local-branch>
+
+
+Pulling + Pushing Branches
+Synchronzing your local + remote Branches
+    # git pull 
+    # git push
+    # git branch -v
 
 
 
@@ -256,7 +275,8 @@ Create and push the brash to GitHub
 
 refes: 
 Learn Git from Scratch - How to Create Branches and push to Github   -link:    https://www.youtube.com/watch?v=pDmYNK68IEc
-
+Git Branches Tutorial -link: https://www.youtube.com/watch?v=e2IbNHi4uCI
+www.bit.ly/git-branches-cheatsheet
 
 
 
