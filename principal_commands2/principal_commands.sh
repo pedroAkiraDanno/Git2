@@ -42,7 +42,7 @@ Add key to github
 
     **why add key to github? 
     to access the repos via ssh, if not put key you need access repos using https and all time need put user and password
-    ref: https://www.youtube.com/watch?v=tjZEplICR5g
+    ref: https://www.youtube.com/watch?v=tjZEplICR5g / https://www.youtube.com/watch?v=Vmt0V6a3ppE
 
 
 
@@ -222,7 +222,7 @@ STEPS 4:
 
 GIT + GITHUB
 
-Branch & Branching Strategies (local and remote)
+Branch & Branching Strategies (local and remote)   &   GitFlow
 
 
 See which branch you current on 
@@ -254,20 +254,27 @@ Rename the branch (change the current branch) local
 
 
 
-Create and push the brash to GitHub (local and remote)
-    # git push --set-upstream origin alpha
+    Create and push the brash to GitHub (local and remote)
+        # git push --set-upstream origin alpha
 
 
-Publishing Branches
-"Uploading" a local branch for the first time
-    # git push -u origin <local-branch>
+    Publishing Branches
+    "Uploading" a local branch for the first time
+        # git push -u origin <local-branch>
 
 
-Pulling + Pushing Branches
-Synchronzing your local + remote Branches
-    # git pull 
-    # git push
-    # git branch -v
+    Pulling + Pushing Branches
+    Synchronzing your local + remote Branches
+        # git pull 
+        # git push
+        # git branch -v
+
+
+
+
+
+
+
 
 
 
@@ -275,8 +282,22 @@ Synchronzing your local + remote Branches
 
 refes: 
 Learn Git from Scratch - How to Create Branches and push to Github   -link:    https://www.youtube.com/watch?v=pDmYNK68IEc
-Git Branches Tutorial -link: https://www.youtube.com/watch?v=e2IbNHi4uCI
-www.bit.ly/git-branches-cheatsheet
+Git Branches Tutorial                                                -link:    https://www.youtube.com/watch?v=e2IbNHi4uCI
+branches-cheatsheet                                                  -link:    www.bit.ly/git-branches-cheatsheet
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -303,7 +324,7 @@ Alias to one command
 
 
 
-Uploads all local branch commits to GitHub
+Uploads all local branch commits to GitHub  (GitHub to local)
     # git pull
 
 
