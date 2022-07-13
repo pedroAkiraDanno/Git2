@@ -100,9 +100,6 @@ Get an existing repository
 
 
 
-Uploads all local branch commits to GitHub
-    # git pull
-
 
 
 
@@ -222,7 +219,7 @@ STEPS 4:
 
 GIT + GITHUB
 
-Branch & Branching Strategies (local and remote)   &   GitFlow
+Branch &   Branching Strategies (local and remote)     &     GitFlow    &     TRUNK BASED DEVELOPMENT
 
 
 See which branch you current on 
@@ -272,18 +269,109 @@ Rename the branch (change the current branch) local
 
 
 
+FINALLLL
+
+
+
+git flow init 
+
+
+  touch index.html 
+
+  git add . 
+
+  git commit -m "add index.html"
+
+
+
+git flow feature start css 
+
+  **dont live brench without commit 
+
+  touch style.css 
+
+  git add . 
+
+  git commit -m "add style.css "
+
+
+#git flow feature publish css
+git flow feature finish css 
 
 
 
 
+
+
+
+git checkout develop
+
+git flow release start 1.0
+
+
+git flow release finish 1.0
+  Project finish - comment to tags 
+
+
+
+
+
+
+
+
+  git checkout main 
+
+git flow hotfix start 1.1
+
+    touch test.js
+
+    git add . 
+
+    git commit -m "alter file add style.css "
+
+git flow hotfix finish 1.1
+  will create the new tag
+
+
+git checkout develop 
+
+
+
+git push --all 
+
+
+
+
+
+
+git flow feature start js 
+
+touch script.js 
+
+git add . 
+git commit -m "add script.js "
+
+
+git flow feature publish  js 
+
+
+
+git flow feature finish  js 
+
+
+git push --all 
+
+
+https://www.youtube.com/watch?v=394mc6PV8t8
 
 
 
 
 refes: 
-Learn Git from Scratch - How to Create Branches and push to Github   -link:    https://www.youtube.com/watch?v=pDmYNK68IEc
-Git Branches Tutorial                                                -link:    https://www.youtube.com/watch?v=e2IbNHi4uCI
-branches-cheatsheet                                                  -link:    www.bit.ly/git-branches-cheatsheet
+    Learn Git from Scratch - How to Create Branches and push to Github   -link:    https://www.youtube.com/watch?v=pDmYNK68IEc
+    Git Branches Tutorial                                                -link:    https://www.youtube.com/watch?v=e2IbNHi4uCI
+    branches-cheatsheet                                                  -link:    www.bit.ly/git-branches-cheatsheet
+    VERSIONAMENTO DE CÓDIGO                                              -link:    https://www.youtube.com/watch?v=qKgiyJl_x_A
 
 
 
@@ -291,14 +379,29 @@ branches-cheatsheet                                                  -link:    w
 
 
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+STEPS 5: 
+
+GIT + GITHUB
+
+Pull request 
+
+
+
+STEPS
+        fork the repository 
+        git clone repo
+
+        git push (to my repo that was fork)
+    
+        github will show PULL REQUEST booton
+    
 
 
 
 
-
-
-
-
+refes: 
+    Como criar seu primeiro pull request no GitHub #hacktoberfest         -link:    https://www.youtube.com/watch?v=Du04jBWrv4A
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -324,7 +427,7 @@ Alias to one command
 
 
 
-Uploads all local branch commits to GitHub  (GitHub to local)
+(GitHub to local)
     # git pull
 
 
@@ -398,12 +501,31 @@ REFE: https://git-scm.com/docs/git-log
 
 
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+STUDY NOTES VERY IMPORTANT 
 
 
 
 
 
 
+
+Git Origin Master
+
+        The term "git origin master" is used in the context of a remote repository. 
+        It is used to deal with the remote repository. 
+        The term origin comes from where repository original situated and master stands for the main branch. 
+        Let's understand both of these terms in detail.
+
+        origin = REMOTE 
+
+
+        https://www.javatpoint.com/git-origin-master#:~:text=The%20term%20%22git%20origin%20master,stands%20for%20the%20main%20branch.
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
