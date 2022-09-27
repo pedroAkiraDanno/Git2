@@ -465,6 +465,9 @@ REFE: https://git-scm.com/docs/git-log
 
 
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+AUTENTICATION GITHUB 
 
 
 
@@ -478,6 +481,32 @@ REFE: https://git-scm.com/docs/git-log
 
 
 
+
+
+
+
+
+
+
+
+REFERENCES: 
+
+https://jdblischak.github.io/2014-09-18-chicago/novice/git/05-sshkeys.html
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github#githubs-token-formats
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh
+https://docs.github.com/pt/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
+https://kinsta.com/blog/generate-ssh-key/
+https://stackoverflow.com/questions/25869207/getting-warning-unprotected-private-key-file-error-message-while-attempting
+https://www.cyberciti.biz/faq/how-do-i-restart-sshd-daemon-on-linux-or-unix/
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
