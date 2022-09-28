@@ -34,6 +34,11 @@ Add key to github
     # ls -lath 
         id_rsa       -> key privave **not share
         id_rsa.pub   -> key public
+
+    
+    #Add SSH Key to ssh-agent (privaty key)
+        eval `ssh-agent`
+        ssh-add ~/.ssh/id_rsa    
     
     Add key to github 
         # setting -> SSH and GPG keys -> SSH keys -> New: name of computer and paste the **id_rsa.pub
@@ -557,6 +562,10 @@ AUTENTICATION GITHUB
 
 
 
+
+#remote: Support for password authentication was removed on August 13, 2021.
+#remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+#fatal: Authentication failed for 'https://github.com/pedroAkiraDanno/commits_tests.git/'
 
 
 
