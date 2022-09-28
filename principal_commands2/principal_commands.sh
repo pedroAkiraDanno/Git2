@@ -474,12 +474,85 @@ AUTENTICATION GITHUB
 
 
 
+#STEPS Generate SSH Keys
+    **TO USE WITH SSH OPTION GITHUB
+
+
+    #Generate SSH Keys Locally
+        ssh-keygen -t ed25519 -C "pedro-akira@hotmail.com"
+
+    #status ssh and restart 
+        ps ax | grep sshd
+        service ssh restart
+        sudo systemctl restart ssh
+
+
+    #Add SSH Key to ssh-agent
+        eval `ssh-agent`
+        ssh-add ~/.ssh/kinsta_keys
+
+
+    #Add SSH Key to GitHub Account
+    #**Add public key .pub
+    #Add key to github 
+    # setting -> SSH and GPG keys -> SSH keys -> New: name of computer and paste the **id_rsa.pub
+        cat ~/.ssh/kinsta_keys.pub
+
+    
+    #if show this  WARNING: UNPROTECTED PRIVATE KEY FILE! 
+    sudo chmod 600 ~/.ssh/id_rsa
+    sudo chmod 600 ~/.ssh/id_rsa.pub
+
+
+    #Test SSH Connection With a Repo Push
+    #First, we’ll need to clone the repository into our local machine. We can go to the repo page on GitHub and copy the SSH address it provides.
+
+    git clone git@github.com:pedroAkiraDanno/commits_tests.git
+    ./script4.sh
 
 
 
 
 
 
+
+
+
+
+#STEPS GENERATE TOKEN 
+    **TO USE WITH hhtp OPTION GITHUB
+
+    #Settings -> Developer settings -> Personal access tokens
+    #Generate new token -> and save the -> Make sure to copy your personal access token now. You wont be able to see it again!
+
+
+    $ git clone https://github.com/username/repo.git
+    Username: your_username
+    Password: your_token
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Key Points
+    #SSH is a secure alternative to username/password authorization
+    #SSH keys are generated in public / private pairs. Your public key can be shared with others. The private keys stays on your machine only.
+    #You can authorize with GitHub through SSH by sharing your public key with GitHub.
 
 
 
@@ -491,15 +564,24 @@ AUTENTICATION GITHUB
 
 REFERENCES: 
 
-https://jdblischak.github.io/2014-09-18-chicago/novice/git/05-sshkeys.html
-https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
-https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github#githubs-token-formats
-https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
-https://docs.github.com/en/authentication/connecting-to-github-with-ssh
-https://docs.github.com/pt/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
-https://kinsta.com/blog/generate-ssh-key/
-https://stackoverflow.com/questions/25869207/getting-warning-unprotected-private-key-file-error-message-while-attempting
-https://www.cyberciti.biz/faq/how-do-i-restart-sshd-daemon-on-linux-or-unix/
+
+    ABOUT GITHUB AUTENTICATION
+        https://jdblischak.github.io/2014-09-18-chicago/novice/git/05-sshkeys.html
+        https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+        https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github#githubs-token-formats
+        https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+        https://docs.github.com/en/authentication/connecting-to-github-with-ssh
+        https://docs.github.com/pt/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
+        https://kinsta.com/blog/generate-ssh-key/
+        https://stackoverflow.com/questions/25869207/getting-warning-unprotected-private-key-file-error-message-while-attempting
+        https://www.cyberciti.biz/faq/how-do-i-restart-sshd-daemon-on-linux-or-unix/
+
+    ABOUT TOKEN 
+        https://docs.github.com/pt/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
+        https://github.com/settings/tokens
+        https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
+
+
 
 
 
