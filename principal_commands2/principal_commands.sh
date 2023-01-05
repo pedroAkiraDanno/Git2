@@ -344,7 +344,8 @@ git checkout develop
 
 git push --all 
 
-git branch --list 
+
+git push origin --tags 
 
 
 
